@@ -39,3 +39,24 @@ http://localhost/8000
 
 Database: http://localhost/phpmyadmin
 
+
+What has been done so far (24.01.2025) :
+
+- Basic frontend components for a Landing page and a product display page
+- Cart component (hardcoded products)
+- Simple login using UserFactory sanctum and plainTextToken
+- API endpoints for CRUD fiúnctionality of the Products
+
+In-progress: 
+- Dashboard admin page.
+- Optimising and fixing bugs for the Cart to work dynamically by connecting to the DB.
+- Dockerisation
+
+To-Do:
+- redis cache
+- fully functional Cart with Checkout option
+- JWT authentication for API access to all endpoints
+
+Total time spent: 4.5 hrs  
+Time estimate to complete the project (with good user experience): 1 week
+
