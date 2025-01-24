@@ -34,6 +34,8 @@ BACKEND:
 
 start xampp server with apache and mysql servers
 
+> cd backend
+
 > php artisan serve (to start the backend)
 
 http://localhost/8000
