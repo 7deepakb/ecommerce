@@ -17,11 +17,11 @@ Git clone the project
 
 FRONTEND:
 
-cd fronted
+> cd fronted
 
-npm install
+> npm install
 
-npm run dev
+> npm run dev
 
 http://localhost/5174
 
@@ -31,7 +31,7 @@ BACKEND:
 
 start xampp server with apache and mysql servers
 
-php artisan serve to start the backend
+> php artisan serve (to start the backend)
 
 http://localhost/8000
 
