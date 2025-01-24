@@ -4,11 +4,11 @@ simple ecommerce app using react, php , mysql, bootstrap
 All tools use the latest versions.
 
 
- PHP/Laravel (v11.x)
- React (18.3.1 using vite build)
- MySQL (v10.4)
- XAMPP server (v3.3 running both Apache and Mysql servers)
- Bootsrap (v5.3.3)
+- PHP (v8.4) /Laravel (v11.x)
+- React (18.3.1 using vite build)
+- MySQL (v10.4)
+- XAMPP server (v3.3 running both Apache and Mysql servers)
+- Bootsrap (v5.3.3)
 
 
 ###########################################################################################################
