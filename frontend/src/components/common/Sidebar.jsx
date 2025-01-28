@@ -13,7 +13,19 @@ const Sidebar = () => {
                     <a href="">Dashboard</a>
                 </li>
                 <li>
-                    <Link to='/admin/products'>Products</Link>
+                    <Link to="/admin/categories">Categories</Link>
+                </li>
+                <li>
+                    <a href="">Brands</a>
+                </li>
+                <li>
+                    <Link to="/admin/products">Products</Link>
+                </li>
+                <li>
+                    <a href="">Orders</a>
+                </li>
+                <li>
+                    <a href="">Users</a>
                 </li>
                 <li>
                     <a href="#" onClick={logout}>Logout</a>

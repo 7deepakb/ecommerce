@@ -1,8 +1,8 @@
 import React from 'react'
 
-const NoState = () => {
+const NoState = ({text='Record not Found'}) => {
   return (
-    <div className='text-center py-5'>Records not Found</div>
+    <div className='text-center py-5'>{text}</div>
   )
 }
 

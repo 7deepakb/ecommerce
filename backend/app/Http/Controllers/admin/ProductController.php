@@ -5,7 +5,6 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\TempImage;
-use Illuminate\Http\Client\Request as ClientRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Drivers\Gd\Driver;
@@ -15,10 +14,10 @@ class ProductController extends Controller
 {
     //method to get all products
     public function index() {
-        $products = Product::orderBy('created_at', 'DESC')->get();
+        $products = Product::orderBy('created_at','DESC')->get();
         return response()->json([
             'status' => 200,
-            'products' => $products
+            'data' => $products
         ], 200);
     }
 
@@ -26,7 +25,7 @@ class ProductController extends Controller
     public function store(Request $request) {
         $validator = Validator::make($request->all(),[
             'title' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric',
             'qty' => 'required',
             'sku' => 'required|unique:products,sku'
         ]);
@@ -136,6 +135,7 @@ class ProductController extends Controller
         $product->qty = $request->qty;
 
         $product->save();
+
         return response()->json([
             'status' => 200,
             'message' => 'Product has been updated'
@@ -156,6 +156,7 @@ class ProductController extends Controller
         }
 
         $product->delete();
+
         return response()->json([
             'status' => 200,
             'message' => 'Product deleted successfully'

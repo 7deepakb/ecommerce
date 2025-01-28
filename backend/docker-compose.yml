@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  backend:
+   build:
+    context: .
+  volumes:
+    - ./www:/app
+  ports:
+    - "8000:8000"
+  restart: always
+  environment:
+   - NODE_ENV=development
+  command: php artisan serve

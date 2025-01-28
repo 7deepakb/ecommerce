@@ -10,9 +10,14 @@ import { ToastContainer, toast } from 'react-toastify'
 import Dashboard from './components/admin/Dashboard'
 import { AdminRequireAuth } from './components/admin/AdminRequireAuth'
 
+import {default as ShowCategories} from './components/admin/category/Show'
+import {default as CreateCategory} from './components/admin/category/Create'
+import {default as EditCategory} from './components/admin/category/Edit'
+
 import { default as ShowProducts } from './components/admin/products/Show'
 import { default as CreateProduct } from './components/admin/products/Create'
 import { default as EditProduct } from './components/admin/products/Edit'
+
 
 function App() {
 
@@ -27,28 +32,45 @@ function App() {
           <Route path='/checkout' element={<Checkout/>}/>
 
           <Route path='/admin/login' element={<Login/>}/>
+
           <Route path='/admin/dashboard' element={
             <AdminRequireAuth>
               <Dashboard/>
             </AdminRequireAuth>
           }/>
 
+          <Route path='/admin/categories' element={
+            <AdminRequireAuth>
+              <ShowCategories/>
+            </AdminRequireAuth>
+          }/>
+          <Route path='/admin/categories/create' element={
+            <AdminRequireAuth>
+              <CreateCategory/>
+            </AdminRequireAuth>
+          }/>
+          <Route path='/admin/categories/edit/:id' element={
+            <AdminRequireAuth>
+              <EditCategory/>
+            </AdminRequireAuth>
+          }/>
+
           <Route path='/admin/products' element={
             <AdminRequireAuth>
-            <ShowProducts/>
-          </AdminRequireAuth>
+              <ShowProducts/>
+            </AdminRequireAuth>
           }/>
 
           <Route path='/admin/products/create' element={
             <AdminRequireAuth>
-            <CreateProduct/>
-          </AdminRequireAuth>
+              <CreateProduct/>
+            </AdminRequireAuth>
           }/>
 
           <Route path='/admin/products/edit/:id' element={
             <AdminRequireAuth>
-            <EditProduct/>
-          </AdminRequireAuth>
+              <EditProduct/>
+            </AdminRequireAuth>
           }/>
 
         </Routes>

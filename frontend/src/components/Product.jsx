@@ -17,7 +17,7 @@ import ProductImgTwo from '../assets/images/Mens/men/six.jpg'
 import ProductImgThree from '../assets/images/Mens/men/seven.jpg'
 
 const Product = () => {
-    const [thumbsSwiper, setThumbsSwiper] = useState(null);
+const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <Layout>
