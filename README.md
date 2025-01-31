@@ -49,8 +49,9 @@ Database: http://localhost/phpmyadmin
 
 ##################################################################################################
 
-Bearer token endpoints:
+JWT token endpoints:
 Login page - http://localhost/5174/admin/login (admin@example.com, password, method: POST)
+Register user - http://localhost/5174/register
 
 Other API endpoints (also authenticated).
 To view all routes: Goto backend and run > php artisan route:list
