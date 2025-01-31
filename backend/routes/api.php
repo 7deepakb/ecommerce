@@ -8,6 +8,12 @@ use App\Http\Controllers\admin\TempImageController;
 use App\Http\Controllers\front\ProductController as FrontProductController;
 
 Route::post('/admin/login',[AuthController::class,'authenticate']);
+Route::post('/register',[AuthController::class,'register']);
+Route::post('/login',[AuthController::class,'login']);
+Route::get('/user',[AuthController::class,'user']);
+Route::get('/logout',[AuthController::class,'logout']);
+
+
 Route::get('get-featured-products',[FrontProductController::class,'featuredProducts']);
 
 Route::group(['middleware' => 'auth:sanctum'],function() {
