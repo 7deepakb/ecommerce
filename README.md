@@ -50,8 +50,10 @@ Database: http://localhost/phpmyadmin
 ##################################################################################################
 
 JWT token endpoints:
-Login page - http://localhost/5174/admin/login (admin@example.com, password, method: POST)
-Register user - http://localhost/5174/register
+Login page - http://localhost:5174/admin/login (admin@example.com, password, method: POST)
+Register user - http://localhost:8000/api/register
+Logout user - http://localhost:8000/api/logout
+Check authenticated user - http://localhost:8000/api/user
 
 Other API endpoints (also authenticated).
 To view all routes: Goto backend and run > php artisan route:list
