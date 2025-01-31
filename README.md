@@ -49,7 +49,7 @@ Database: http://localhost/phpmyadmin
 
 ##################################################################################################
 
-JWT token endpoints:
+Bearer token endpoints:
 Login page - http://localhost/5174/admin/login (admin@example.com, password, method: POST)
 
 Other API endpoints (also authenticated).
